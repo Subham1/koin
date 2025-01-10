@@ -18,8 +18,7 @@
 
 2. Install dependencies:
     ```bash
-    npm install
-    ```
+    npm install axios dotenv express mathjs mongoose
 
 3. Create a `.env` file in the root directory and add the following environment variables:
 
@@ -32,9 +31,7 @@
     - **API_KEY**: Your CoinGecko API key.
 
 ## Running the Project
-1. Install dependencies:
-    ```bash
-    npm install axios dotenv express mathjs mongoose
+
 
 2. Start the server:
     ```bash
@@ -50,7 +47,7 @@
 
 1. **Immediate Start:** Upon starting the application, the background job initializes and immediately fetches the latest data for Bitcoin, Matic, and Ethereum from the CoinGecko API.
 2. **Periodic Updates:** The job runs every 2 hours to update and store cryptocurrency data in the MongoDB database.
-
+ ![Deviation Endpoint](./assest/s2.png)
    
 
 ## Endpoints
@@ -74,7 +71,7 @@ Fetches the latest data for a given cryptocurrency.
         "last_updated": "2025-01-11T00:00:00Z"
     }
     ```
-   
+   ![Deviation Endpoint](./assest/s1.png)
 
 ### `/deviation`
 
@@ -82,6 +79,7 @@ Calculates and returns the standard deviation of the price of a given cryptocurr
 
 - **Query Params:**
   - `coin`: The ID of the cryptocurrency (e.g., `bitcoin`, `matic-network`, or `ethereum`).
+     
 
 - **Response Example:**
     ```json
@@ -89,4 +87,4 @@ Calculates and returns the standard deviation of the price of a given cryptocurr
         "deviation": 4082.48
     }
     ```
- 
+ ![Deviation Endpoint](./assest/s3.png)
